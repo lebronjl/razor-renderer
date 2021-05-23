@@ -1,0 +1,25 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@using RazorRenderer.Resources
+@model RazorRenderer.Templates.Models.ExampleSingleTemplateModel
+@inject IHtmlLocalizer<SharedLanguageResources> SharedLocalizer
+
+<html>
+
+<head>
+    <style>
+        .test {
+            background-color: tomato;
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>@SharedLocalizer["Test_Resource_1"]</div>
+    <div class="test">Plain text: @Model.PlainText</div>
+</body>
+
+</html>

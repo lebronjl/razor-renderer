@@ -1,0 +1,13 @@
+@model RazorRenderer.Templates.Models.ExampleMultipleTemplatesModel
+
+<html>
+
+<head>
+</head>
+
+<body>
+    <div>Plain text: @Model.PlainText</div>
+    @Html.Partial("ExampleMultiplePartialView.cshtml", Model)
+</body>
+
+</html>
